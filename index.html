@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>birthday button</title>
     <link rel="stylesheet" href="cumple.css">
+
+    <link rel="icon" href="logo.jpg" type="image/jpg">
+
 </head>
 <body>
      <nav class="navegacion_pricipal">
-        <div class="logo">Cumpleaños Rios de vida soledad</div>
+        <div class="logo">Cumpleaños Rios De Vida Soledad</div>
     </nav>
-    <section class="Agregar_cumples">
+    <div class="Agregar_cumples">
         <form id="formulario">
-            <h1>Agrega Tu Cumpleaños</h1>
+            <h1>🎉Agrega Tu Cumpleaños🎉</h1>
             <!-- Nombre completo -->
         <input type="text" id="nombre" name="nombre" required placeholder="Nombre Completo"><br><br>
 
         <!-- Edad -->
         <input type="number" id="edad" name="edad" required placeholder="Edad"><br>
 
-        <p>Selecciona tu género:</p>
+        <!--genero-->
+        <p>Tu genero:</p>
 
         <input type="radio" id="masculino" name="genero" value="masculino">
         <label for="masculino">Masculino</label><br>
@@ -39,7 +43,7 @@
         <!-- Botón -->
         <button type="submit">Enviar</button>
         </form>
-</section>
+    </div>
 <script>
 document.getElementById("formulario").addEventListener("submit", function(e){
     e.preventDefault();
