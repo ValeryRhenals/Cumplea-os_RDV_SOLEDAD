@@ -1,0 +1,41 @@
+:root{
+    --pink-light: #a7a5a5;
+    --pink-main: #e8a8a4;
+    --pink-dark: #000000;
+    --text-color: #555;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 50;
+    background-color: var(--pink-light);
+    color: var(--text-color);
+}
+
+.navegacion_pricipal{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+
+    background-color: var(--white); /* color del cuadro */
+    border-radius: 15px; /* bordes redonditos */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombrita */
+    margin: 20px auto; /* lo centra */
+    width: 80%; /* ancho del cuadro */
+}
+
+.Agregar_cumples{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+
+    background-color: var(--white); /* color del cuadro */
+    border-radius: 15px; /* bordes redonditos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.801); /* sombrita */
+    margin: 20px auto; /* lo centra */
+    width: 80%; /* ancho del cuadro */
+    justify-content: space-between;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birthday button</title>
+    <link rel="stylesheet" href="cumple.css">
+</head>
+<body>
+     <nav class="navegacion_pricipal">
+        <div class="logo">Cumpleaños Rios de vida soledad</div>
+    </nav>
+    <section class="Agregar_cumples">
+        <form id="formulario">
+            <h1>Agrega Tu Cumpleaños</h1>
+            <!-- Nombre completo -->
+        <input type="text" id="nombre" name="nombre" required placeholder="Nombre Completo"><br><br>
+
+        <!-- Edad -->
+        <input type="number" id="edad" name="edad" required placeholder="Edad"><br>
+
+        <p>Selecciona tu género:</p>
+
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label><br>
+
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        <label for="femenino">Femenino</label><br><br>
+
+        <!-- Fecha de nacimiento -->
+        <input type="date" id="fecha" name="fecha" required placeholder="Fecha de Nacimiento"><br><br>
+
+        <!-- Teléfono -->
+        <input type="tel" id="telefono" name="telefono" required placeholder="Escribe tu numero telefonico"><br><br>
+
+        <!-- Correo -->
+        <input type="email" id="correo" name="correo" required placeholder="Escribe tu correo"><br><br>
+
+        <!-- Botón -->
+        <button type="submit">Enviar</button>
+        </form>
+</section>
+<script>
+document.getElementById("formulario").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const datos = {
+        nombre: document.getElementById("nombre").value,
+        edad: document.getElementById("edad").value,
+        genero: document.querySelector('input[name="genero"]:checked')?.value,
+        fecha: document.getElementById("fecha").value,
+        telefono: document.getElementById("telefono").value,
+        correo: document.getElementById("correo").value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbymysSESeaS-UGKQ_TRBNQ_QoMU25LTPiRaxHwtAtmbnw_-jG7zccoS0PrMJpJPcsWH/exec", {
+        method: "POST",
+        body: JSON.stringify(datos)
+    })
+    .then(() => {
+        alert("Datos guardados 🎉");
+        document.getElementById("formulario").reset();
+    })
+    .catch(() => alert("Error al guardar 😢"));
+});
+</script>
+</body>
+</html>
