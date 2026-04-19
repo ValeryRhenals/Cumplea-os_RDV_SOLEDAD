@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>birthday button</title>
+    <title>Birthday Button</title>
     <link rel="stylesheet" href="cumple.css">
 
     <link rel="icon" href="logo.jpg" type="image/jpg">
@@ -15,7 +15,7 @@
     </nav>
     <div class="Agregar_cumples">
         <form id="formulario">
-            <h1>🎉Agrega Tu Cumpleaños🎉</h1>
+            <h1>🎉Agrega Tu Cufmpleaños🎉</h1>
             <!-- Nombre completo -->
         <input type="text" id="nombre" name="nombre" required placeholder="Nombre Completo"><br><br>
 
@@ -26,7 +26,7 @@
         <p>Tu genero:</p>
 
         <input type="radio" id="masculino" name="genero" value="masculino" >
-        <label for="masculino">Masculino</label><br>
+        <label for="masculino">Masculino</label><br>    
 
         <input type="radio" id="femenino" name="genero" value="femenino">
         <label for="femenino">Femenino</label><br><br>
@@ -41,6 +41,16 @@
         <!-- Correo -->
         <input type="email" id="correo" name="correo" required placeholder="Escribe tu correo"><br><br>
 
+        <!--Red a la que  pertenece-->
+        <label for="red">Red a la que pertenece</label>
+        <select name="red" id="red">
+            <option value="elige">Seleciona una red aqui</option>
+            <option value="de vida youth">De Vida  Youth</option>
+            <option value="plus">Plus</option>
+            <option value="ejecutiva">Ejecutiva</option>
+            <option value="matri-menores">Matrimonios Menores</option>
+            <option value="matri-mayores">Matrimonios Mayores</option>
+        </select>
         <!-- Botón -->
         <button type="submit">Enviar</button>
         </form>
