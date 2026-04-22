@@ -65,7 +65,8 @@ document.getElementById("formulario").addEventListener("submit", function(e){
         genero: document.querySelector('input[name="genero"]:checked')?.value,
         fecha: document.getElementById("fecha").value,
         telefono: document.getElementById("telefono").value,
-        correo: document.getElementById("correo").value
+        correo: document.getElementById("correo").value,
+        red: document.getElementById("red").value
     };
 
     fetch("https://script.google.com/macros/s/AKfycbymysSESeaS-UGKQ_TRBNQ_QoMU25LTPiRaxHwtAtmbnw_-jG7zccoS0PrMJpJPcsWH/exec", {
