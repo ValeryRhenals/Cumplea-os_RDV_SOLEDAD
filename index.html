@@ -52,6 +52,8 @@
             <option value="matri-mayores">Matrimonios Mayores</option>
         </select>
         <!-- Botón -->
+        <h3> IMPORTANTE </h3>
+        <p>Para evitar registros duplicados, presiona el botón solo una vez. ¡Gracias por tu apoyo!</p>
         <button type="submit">Enviar</button>
         </form>
     </div>
@@ -82,3 +84,23 @@ document.getElementById("formulario").addEventListener("submit", function(e){
 </script>
 </body>
 </html>
+
+<!--como la tenia en el git, ya la actualice, pero que pasa yo esa pagina la estoy usando y buscando como hacerla para que los demas la puedan usar y tu en otra conversacion me dijiste como, me dijiste que atraves de un una hoja de excel en google, me dijiste  que desde la primera columna colocara nombre | edad | genero | fecha | telefono | |correo, y tambien me dijiste que usara un apps script donde coloco lo siguiente 
+function doPost(e) {
+  var hoja = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var datos = JSON.parse(e.postData.contents);
+
+  hoja.appendRow([
+    datos.nombre,
+    datos.edad,
+    datos.genero,
+    datos.fecha,
+    datos.telefono,
+    datos.correo,
+  ]);
+
+  return ContentService.createTextOutput("ok");
+}
+pero como ahora le estamos agergando otro dato que necesito que tambien se guarde en el excel, como haria??
+
+-->
